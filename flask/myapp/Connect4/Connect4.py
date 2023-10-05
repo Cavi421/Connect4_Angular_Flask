@@ -38,6 +38,7 @@ class Connect4Class:
             self.random_column, self.player2
         )
 
+        # Calculate number of zeroes to understand the nth token inserted
         number_of_zeroes = 0
         for row in self.Board.matrix_board:
             number_of_zeroes += row.count(0)

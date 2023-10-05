@@ -5,7 +5,7 @@ class RefereeClass:
     def __init__(self: object):
         self.winning_cells = []
 
-        print("winning_cells", self.winning_cells)
+        # print("winning_cells", self.winning_cells)
 
     def HorizontalCheckWin(
         self: object, Board: BoardClass, last_move: tuple, player: object
@@ -308,7 +308,7 @@ class RefereeClass:
     ) -> None:
         self.winning_cells = cells_to_convert_in_winning_line
 
-        print(self.winning_cells)
+        # print(self.winning_cells)
 
         for cell in cells_to_convert_in_winning_line:
             row_id, column_id = cell
