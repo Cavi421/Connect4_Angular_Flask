@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  flask:
+    image: python:3.9.18-slim-bullseye
+    container_name: flask_server
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      sh -c "pip install Flask && pip install flask-cors && python /code/flask/app.py"
+    volumes:
+      - ./flask/myapp:/code/flask
+    ports:
+      - "5000:5000"
+    networks:
+      - my_network
+
+  angular:
+    image: node:current-bullseye
+    container_name: angular_server
+    working_dir: /code/angular_app
+    command: >
+      sh -c "npm install && npm install -g @angular/cli && ng serve --host 0.0.0.0 --poll=2000 --disable-host-check"
+    volumes:
+      - ./angular_app:/code/angular_app
+    ports:
+      - "4200:4200"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

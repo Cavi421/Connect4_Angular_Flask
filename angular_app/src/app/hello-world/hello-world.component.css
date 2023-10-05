@@ -1,0 +1,81 @@
+label {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 25px;
+}
+
+
+body {
+    background: #eee;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h2.info {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+input {
+
+    margin-bottom: 20px;
+
+}
+
+#column_form {
+    text-align: center;
+}
+
+#game-base {
+    width: 640px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#game-table {
+    width: 639px;
+    height: 553px;
+    margin: 0 auto;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/8/87/Connect4_Empty.PNG") 0 0 no-repeat;
+    position: relative;
+}
+
+.disc {
+    position: absolute;
+    z-index: 1;
+    top: -55px;
+    left: 14px;
+    width: 55px;
+    height: 55px;
+    border-radius: 55px;
+    transition: all .3s;
+}
+
+.disc.red {
+    background: #d96666;
+}
+
+.disc.yellow {
+    background: #ffeb79;
+}
+
+
+.winning_token {
+    position: absolute;
+    z-index: 2;
+    top: -55px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+    border-radius: 55px;
+    transition: all .3s;
+    background-color: black;
+}

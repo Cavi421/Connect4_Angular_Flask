@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API in Flask Application</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+
+    <script src="{{url_for('static',filename='js/script.js')}}" defer></script>
+
+
+</head>
+
+<body>
+
+    <h1>Connect Four Game</h1>
+
+    <h2 class="info" id="info_msg">Select a column where to place the token</h2>
+    <form id="column_form">
+        <label>
+            <input type="radio" name="answer" value="1"> 1st
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2"> 2nd
+        </label>
+        <label>
+            <input type="radio" name="answer" value="3"> 3rd
+        </label>
+        <label>
+            <input type="radio" name="answer" value="4"> 4th
+        </label>
+        <label>
+            <input type="radio" name="answer" value="5"> 5th
+        </label>
+        <label>
+            <input type="radio" name="answer" value="6"> 6th
+        </label>
+        <label>
+            <input type="radio" name="answer" value="7"> 7th
+        </label><br>
+        <input type="submit" value="Submit" class="send__data__btn" id="submit_button">
+    </form>
+    <div id="game-base">
+        <div id="game-table">
+
+            <!--<div id="1" class="disc red"></div>-->
+
+        </div>
+    </div>
+
+</body>
+
+</html>

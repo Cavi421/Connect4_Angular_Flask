@@ -1,0 +1,41 @@
+<h1>Connect Four Game</h1>
+<h2 class="info" id="info_msg">{{msg_to_show}}</h2>
+
+<div>
+    <form id="column_form" (ngSubmit)="onSubmit()">
+
+        <label><input type="radio" [(ngModel)]="data_form.answer" name="answer" value="1">1st</label>
+        <label><input type="radio" [(ngModel)]="data_form.answer" name="answer" value="2">2nd</label>
+        <label><input type="radio" [(ngModel)]="data_form.answer" name="answer" value="3">3rd</label>
+        <label><input type="radio" [(ngModel)]="data_form.answer" name="answer" value="4">4th</label>
+        <label><input type="radio" [(ngModel)]="data_form.answer" name="answer" value="5">5th</label>
+        <label><input type="radio" [(ngModel)]="data_form.answer" name="answer" value="6">6th</label>
+        <label><input type="radio" [(ngModel)]="data_form.answer" name="answer" value="7">7th</label><br>
+
+
+        <button *ngIf="show_button == true" type="submit">Submit</button>
+    </form>
+</div>
+
+<div id="game-base">
+    <div id="game-table">
+        <!--<div id="1" class="disc red"></div>-->
+        <div *ngFor="let token of tokens_to_add; let i = index">
+
+            <div style.top="{{token.position_top}}" style.left="{{token.position_left}}" id="d{{token.token_id}}"
+                class="disc {{token.color}}">
+            </div>
+        </div>
+
+
+        <!-- Winning tokens marked-->
+        <div *ngFor="let wt of winning_tokens; let i = index">
+
+            <div style.top="{{wt.position_top}}" style.left="{{wt.position_left}}"
+                class="winning_token">
+            </div>
+
+        </div>
+
+    </div>
+</div>
