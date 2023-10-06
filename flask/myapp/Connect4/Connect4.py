@@ -146,11 +146,12 @@ class Connect4Class:
         #### HUMAN PLAYER TURN ####
 
         # If turn is not successful or game is won by human player
-        # returns the json, stopping the AI player
+        # returns the json, stopping the AITurn from being executed
         if not self.HumanTurn():
             return self.data_to_send_back
 
         #### AI TURN ####
+        # There is no return statement because AI input is always correct
         self.AITurn()
 
         # Check if the game is a draw
