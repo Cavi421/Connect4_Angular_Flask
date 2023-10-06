@@ -4,13 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HelloWorldComponent } from './hello-world/hello-world.component';
+import { Connect4Component } from './connect4/connect4.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent
+    Connect4Component
   ],
   imports: [
     BrowserModule,
